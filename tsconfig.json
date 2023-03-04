@@ -11,9 +11,15 @@
         "removeComments": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "preserveConstEnums": true
+        "preserveConstEnums": true,
+        "baseUrl": "./",
+        "paths": {
+          "crypto": [
+            "node_modules/crypto-js"
+          ]
+        }
     },
     "include": [
         "./src/**/*"
-    ]
+    ]  
 }

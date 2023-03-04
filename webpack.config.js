@@ -44,6 +44,13 @@ module.exports = {
         ]
     },
     resolve: {
+        fallback: {
+            "crypto": require.resolve("crypto-browserify"),
+            "path": require.resolve("path-browserify"),
+            "buffer": require.resolve("buffer/"),
+            "stream": require.resolve("stream-browserify"),
+            "fs": false
+         },
         extensions: [".tsx", ".ts", ".js", ".jsx", ".json"],
     },
     plugins: [

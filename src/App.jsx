@@ -1,17 +1,18 @@
 import React from "react";
-import { Search } from "./components/search/search.jsx";
+import InitSqlJs from "sql.js";
+
 
 export function App () {
+
+    async function retr () {
+        const SQL = await InitSqlJs({
+            locateFile: file => `https://sql.js.org/dist/${file}`
+        });
+        const db = new SQL.Database;
+    }
+
+
     return (
-        <Search />
+        <div />
     )
 }
-
-// propagation fix
-// export class App extends React.Component {
-//     render() {
-//       return (
-//         <Search />
-//       );
-//     }
-//  }
